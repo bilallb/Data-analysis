@@ -14,7 +14,7 @@ def load_file(data):
         print('File not found')
 
 # loading file
-bios = load_file('coffeedata.csv')
+bios = load_file('sleep_data.csv')
 
 # Use regex to extract hours and minutes
 bios['Duration_hours'] = bios['Duration'].str.extract(r'(\d+)h\s*(\d+)m').apply(
@@ -46,3 +46,4 @@ plt.ylabel('Duration (in hours)')
 # setting title and showing the graph
 plt.title("My own sleeping data graph")
 plt.show()
+
